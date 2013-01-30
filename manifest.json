@@ -1,15 +1,21 @@
 {
-  "name": "VisivoTab",
-  "version": "1.0.0",
+  "manifest_version": 2,
+
+  "name": "FancyTab",
   "description": "Beautiful photos hand-selected by Flickr's danielpuglisi for your New Tab",
-  "chrome_url_overrides": {
-    "newtab": "flickrset.html"
-  },
-  "background_page": "background.html",
+  "version": "1.0.0",
+
   "permissions": [
     "http://api.flickr.com/",
     "tabs"
   ],
-  "icons": {"48": "icon48.jpg",
-            "128": "icon128.jpg"}
+
+  "chrome_url_overrides": {
+    "newtab": "flickrset.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+  // "icons": {"48": "icon48.jpg",
+  //           "128": "icon128.jpg"}
 }

@@ -1,10 +1,10 @@
-<script>
-  var API_KEY = "YOUR_KEY_HERE";
-  var VISIVO_SET = "72157632647136261";
+  var API_KEY = "3971269ca31480bc6f0161e45a48a054";
+  var FLICKR_SET = "72157632647136261";
   var PER_PAGE = "500";
   var shortTimeout = 500;
   var longTimeout = 5 * 60 * 1000;
-  var DEBUG = false;
+  var DEBUG = true;
+
   function log (o) {
     if (DEBUG) console.log(o);
   }
@@ -83,8 +83,8 @@
                   "id": photo.getAttribute("id")
                   }
 
-    cached.ownername = 'visivo';
-    cached.owner = 'visivo';
+    cached.ownername = 'danielpuglisi';
+    cached.owner = 'danielpuglisi';
 
     photoCache.push(cached);
     localStorage["photoCache"] = JSON.stringify(photoCache);
@@ -105,5 +105,4 @@
         "_b.jpg";
   }
 
-  fetchSet(VISIVO_SET, fillCache);
-</script>
+  fetchSet(FLICKR_SET, fillCache);
