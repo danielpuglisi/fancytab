@@ -1,4 +1,4 @@
-  var API_KEY = "3971269ca31480bc6f0161e45a48a054";
+  var API_KEY = "YOUR API KEY";
   var FLICKR_SET = "72157632647136261";
   var PER_PAGE = "500";
   var shortTimeout = 500;
