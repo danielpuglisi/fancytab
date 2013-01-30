@@ -16,6 +16,6 @@
   "background": {
     "scripts": ["background.js"]
   }
-  // "icons": {"48": "icon48.jpg",
-  //           "128": "icon128.jpg"}
+  "icons": {"48": "icon48.jpg",
+            "128": "icon128.jpg"}
 }
