@@ -3,7 +3,7 @@
   var PER_PAGE = "500";
   var shortTimeout = 500;
   var longTimeout = 5 * 60 * 1000;
-  var DEBUG = true;
+  var DEBUG = false;
 
   function log (o) {
     if (DEBUG) console.log(o);

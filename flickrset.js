@@ -4,7 +4,6 @@ var cached = cachedImages[whichImage];
 
 document.body.style.backgroundImage = "url(" + cached.src + ")";
 document.body.style.backgroundSize = "cover";
-// var keys = Object.keys(cached);
 
 var byline = document.getElementById("wrapper");
 byline.href =
