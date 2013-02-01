@@ -107,4 +107,15 @@
         "_b.jpg";
   }
 
-  fetchSet(FLICKR_SET, fillCache);
+  function init() {
+    localStorage["photoCache"] = null;
+  
+    var flickr_set = localStorage["flickr_set"];
+    if (!flickr_set) {
+      flickr_set = FLICKR_SET;
+    }
+  
+    fetchSet(flickr_set, fillCache);
+  }
+
+  init();

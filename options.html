@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FancyTab Settings</title>
+  <style type="text/css">
+    article {
+        font-family:"Helvetica Neue," Helvetica, Arial, sans-serif;
+        width:600px;
+        margin:50px auto 0 auto;
+    }
+    
+    h1 {
+        font-weight:normal;
+        margin:30px 0 0 0;
+    }
+    
+    ul {
+        list-style:none;
+        margin:0;
+        margin-left:200px;
+        padding:0;
+    }
+    
+    li {
+        margin-bottom:15px;
+    }
+    
+    label {
+        color:#777;
+    }
+    
+    label img {
+        vertical-align:text-bottom;
+    }
+    
+    label span {
+        width:40px;
+        display:inline-block;
+        text-align:center;
+    }
+    
+    section {
+        margin:20px 0 0;
+        padding:40px 0 10px 0;
+        border-top:1px solid #ddd;
+    }
+    
+    h2 {
+        float:left;
+        width:180px;
+        font-size:16px;
+        margin:0;
+    }
+    
+    p {
+        float:left;
+        width:180px;
+        font-size:16px;
+        margin:0;
+    }
+    
+    .action {
+        padding:20px 0;
+    }
+    
+    button {
+        margin: 0 2px 0 0;
+        min-width: 73px;
+        background-color: #EFEFEF;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, white), color-stop(1, #EFEFEF));
+        background-image: -webkit-linear-gradient(white, #EFEFEF);
+        box-shadow: 0 1px 1px #EEE;
+        font-weight: bold;
+        border: 1px solid #CCC;
+        border-top: 1px solid #DDD;
+        color: #333;
+        text-shadow: 0 1px 0px white;
+        border-bottom: 1px solid #AAA;
+        padding: 0.5em 0.8em;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-transition: 0.15s border-color linear;
+        white-space: nowrap;
+        vertical-align: middle;
+        font-size: 13px;
+        margin-left:200px;
+    }
+	
+	input[type=text] {
+		margin:0 0 0 15px;
+		height:20px;
+        width:250px;
+		padding:5px;
+		border:#CCC 1px solid;
+	}
+    
+  </style>
+</head>
+<body>
+    <article>
+        <h1>FancyTab Settings</h1>
+        <section class="button-color">
+            <h2>Flickr settings</h2>
+                <ul id="flickr_settings">
+                    <li><label for="input_flickr_set">Flickr Set:</label><input type="text" id="input_flickr_set" placeholder="72157632647136261"></li>
+                </ul> 
+        </section>
+    <section class="action">
+        <button id="save">Save Changes</button>
+    </section>
+	
+	<section id="status">
+	
+	</section>
+</article>
+
+<script type="text/javascript" src="options.js"></script>
+</body>
+</html>
