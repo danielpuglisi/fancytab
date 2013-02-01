@@ -22,7 +22,7 @@
           "method=flickr.groups.pools.getPhotos&" +
           "api_key=" + API_KEY + "&" +
           "group_id=" + poolId + "&" +
-          "extras=url_o&" +
+          "extras=url_o,path_alias&" +
           "per_page=" + PER_PAGE,
         true);
     req.onload = function () { callback(req) };
@@ -37,7 +37,7 @@
           "method=flickr.photosets.getPhotos&" +
           "api_key=" + API_KEY + "&" +
           "photoset_id=" + photosetId + "&" +
-          "extras=url_o&" +
+          "extras=url_o,path_alias&" +
           "per_page=" + PER_PAGE,
         true);
     req.onload = function () { callback(req) };
@@ -82,11 +82,10 @@
     var photoCache = JSON.parse(localStorage["photoCache"]);
     var cached = {"src": img.src,
                   "title": photo.getAttribute("title"),
-                  "id": photo.getAttribute("id")
+                  "id": photo.getAttribute("id"),
+                  "ownername": photo.getAttribute("pathalias"),
+                  "owner": photo.getAttribute("pathalias")
                   }
-
-    cached.ownername = 'danielpuglisi';
-    cached.owner = 'danielpuglisi';
 
     photoCache.push(cached);
     localStorage["photoCache"] = JSON.stringify(photoCache);
@@ -109,12 +108,12 @@
 
   function init() {
     localStorage["photoCache"] = null;
-  
+
     var flickr_set = localStorage["flickr_set"];
     if (!flickr_set) {
       flickr_set = FLICKR_SET;
     }
-  
+
     fetchSet(flickr_set, fillCache);
   }
 
