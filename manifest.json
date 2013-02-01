@@ -1,9 +1,10 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "FancyTab",
   "description": "Beautiful photos hand-selected by Flickr's danielpuglisi for your New Tab",
   "version": "1.0.0",
+  "options_page": "options.html",
 
   "permissions": [
     "http://api.flickr.com/",
