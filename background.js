@@ -18,7 +18,7 @@
     var req = new XMLHttpRequest();
     req.open(
         "GET",
-        "http://api.flickr.com/services/rest/?" +
+        "https://api.flickr.com/services/rest/?" +
           "method=flickr.groups.pools.getPhotos&" +
           "api_key=" + API_KEY + "&" +
           "group_id=" + poolId + "&" +
@@ -33,7 +33,7 @@
     var req = new XMLHttpRequest();
     req.open(
         "GET",
-        "http://api.flickr.com/services/rest/?" +
+        "https://api.flickr.com/services/rest/?" +
           "method=flickr.photosets.getPhotos&" +
           "api_key=" + API_KEY + "&" +
           "photoset_id=" + photosetId + "&" +
@@ -97,9 +97,9 @@
     localStorage["photoCache"] = JSON.stringify(photoCache);
   }
 
-  // See: http://www.flickr.com/services/api/misc.urls.html
+  // See: https://www.flickr.com/services/api/misc.urls.html
   function constructImageUrl(photo) {
-    return "http://farm" + photo.getAttribute("farm") +
+    return "https://farm" + photo.getAttribute("farm") +
         ".static.flickr.com/" + photo.getAttribute("server") +
         "/" + photo.getAttribute("id") +
         "_" + photo.getAttribute("secret") +

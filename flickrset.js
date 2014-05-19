@@ -7,7 +7,7 @@ document.body.style.backgroundSize = "cover";
 
 var byline = document.getElementById("wrapper");
 byline.href =
-'http://www.flickr.com/photos/' + cached.owner + '/' + cached.id;
+'https://www.flickr.com/photos/' + cached.owner + '/' + cached.id;
 
 if (false && localStorage['showTitle']) {
   var title = document.createElement("span");
